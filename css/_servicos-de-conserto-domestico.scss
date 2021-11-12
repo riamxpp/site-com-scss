@@ -1,0 +1,155 @@
+.servicos__de-coserto-domestico {
+  display: grid;
+  grid-template-rows: 1.2fr 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background: $cor-secundaria;
+  height: 90%;
+  @include desktop-1200 {
+    height: 60%;
+  }
+  @include tablet-900 {
+    min-height: 1645px;
+    max-height: 2000px;
+  }
+  .servico__de-conserto-domestico-titulo {
+    grid-row: 1;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 40px 0;
+    h2 {
+      font-size: 3em;
+      font-weight: 700;
+      margin: 60px 0 20px 0;
+      color: #fff;
+    }
+    span {
+      color: #6d6666;
+      font-size: 1.3em;
+      font-weight: 500;
+      font-style: italic;
+    }
+  }
+  .servicos__de-conserto-domestico-parte-1 {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    width: 100%;
+    @include desktop-1200 {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .conserto__domestico-1 {
+      grid-column: 1;
+      grid-row: 1;
+      @include desktop-1200 {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+    .conserto__domestico-2 {
+      grid-column: 2;
+      grid-row: 1;
+      @include desktop-1200 {
+        grid-column: 2;
+        grid-row: 1;
+      }
+    } 
+    .conserto__domestico-3 {
+      grid-column: 3;
+      grid-row: 1;
+      @include desktop-1200 {
+        grid-column: 1;
+        grid-row: 2;
+      }
+    } 
+    .conserto__domestico-4 {
+      grid-column: 1;
+      grid-row: 2;
+      @include desktop-1200 {
+        grid-column: 2;
+        grid-row: 2;
+      }
+    } 
+    .conserto__domestico-5 {
+      grid-column: 2;
+      grid-row: 2;
+      @include desktop-1200 {
+        grid-column: 1;
+        grid-row: 3;
+      }
+    } 
+    .conserto__domestico-6 {
+      grid-column: 3;
+      grid-row: 2;
+      @include desktop-1200 {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    } 
+
+    //*********
+    @include tablet-900 {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 50px;
+      .conserto__domestico-1 {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .conserto__domestico-2 {
+        grid-column: 1;
+        grid-row: 2;
+      } 
+      .conserto__domestico-3 {
+        grid-column: 1;
+        grid-row: 3;
+      } 
+      .conserto__domestico-4 {
+        grid-column: 1;
+        grid-row: 4;
+      } 
+      .conserto__domestico-5 {
+        grid-column: 1;
+        grid-row: 5;
+      } 
+      .conserto__domestico-6 {
+        grid-column: 1;
+        grid-row: 6;
+      }
+    }
+  }  
+
+  div {
+    width: 370px;
+    @include tablet-900 {
+      width: 80%
+    }
+    h3 {
+      @include titulo-servicos-de-conserto-domestico;
+    }
+    p {
+      @include paragrafo-servicos-de-conserto-domestico;
+    }
+  }
+
+  a {
+    grid-row: 3;
+    padding: 20px 50px 20px 50px;
+    color: $cor-primaria;
+    letter-spacing: .05cm;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 3px solid $cor-primaria;
+    // @include tablet-900 {
+    //   padding: 20px 30px 20px 30px;
+    //   width: 310px;
+    // }
+    &:hover {
+      border: none;
+    }
+  }
+}

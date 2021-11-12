@@ -1,0 +1,81 @@
+.servicos__de-reparo {
+  width: 100%;
+  height: 915px;
+  display: inline-block;
+  background: url('/img/fundo-como-podemos-te-ajudar.jpg') no-repeat;
+  background-size: 1700px;
+  @include desktop-1400 {
+    height: 700px;
+    background-size: 1380px;
+  }
+  @include desktop-1200 {
+    background-size: 1150px;
+  }
+  @include desktop-1000 {
+    background-size: 1050px;
+  }
+  @include smartphone-650 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  div {
+    width: 500px;
+    height: 80%;
+    background-color: $cor-primaria;
+    position: relative;
+    color: $cor-secundaria;
+    margin: 70px 0 0 115px;
+    @include desktop-1400 {
+      width: 400px;
+      height: 77%;
+    }
+    @include smartphone-650 {
+      width: 300px;
+      height: 70%;
+      margin: 20px auto 0 auto;
+    }
+    h4 {
+      width: 90%;
+      font-size: 3.5em;
+      margin: 70px 0 0 50px;
+      position: absolute;
+      font-weight: 700;
+      @include desktop-1400 {
+        font-size: 3em;
+        margin: 70px 0 0 30px;
+      }
+      @include smartphone-650 {
+        font-size: 2em;
+      }
+    }
+    h1 {
+      width: 90%;
+      margin: 220px 0 0 50px;
+      position: absolute;
+      font-size: 5em;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.2;
+      @include desktop-1400 {
+        font-size: 3.5em;
+        margin: 220px 0 0 30px;
+      }
+      @include smartphone-650 {
+        font-size: 2.8em;
+      }
+    }
+  }
+
+  @include credito-das-imagens(#fff, $cor-primaria);
+  span {
+    margin: 30px 0 0 115px;
+    position: absolute;
+    @include smartphone-650 {
+      position: relative;
+      text-align: center;
+      margin: 20px 0 0 0;
+    }
+  }
+}

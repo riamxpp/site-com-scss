@@ -1,0 +1,92 @@
+$cor-primaria: #F1C50E;
+$cor-secundaria: #1A1A1A;
+$cor-terciaria: #3333338a;
+
+@mixin credito-das-imagens($cor-span, $cor-link){
+  span {
+    line-height: .7cm;
+    font-size: 1.2em;
+    color: $cor-span;
+    a {
+      color: $cor-link;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        color: darken($cor-link, 20%);
+        transition: .3s;
+      }
+    }
+  }
+}
+
+@mixin titulo-servicos-de-conserto-domestico {
+  color: $cor-primaria;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+@mixin paragrafo-servicos-de-conserto-domestico {
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@mixin button__mobile($color) {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  background: $color;
+  box-shadow: 0 -10px $color, 0 10px $color;
+}
+
+@mixin desktop-1400 {
+  @media (max-width: 1400px){
+    @content
+  }
+};
+
+@mixin desktop-1200 {
+  @media (max-width: 1200px){
+    @content
+  }
+};
+
+@mixin  desktop-1000 {
+  @media (max-width: 1000px) {
+    @content
+  }
+};
+
+@mixin tablet-900 {
+  @media only screen and (max-width: 900px){
+    @content
+  }
+};
+
+@mixin tablet-800 {
+  @media only screen and (max-width: 800px){
+    @content
+  }
+};
+
+@mixin  tablet-750 {
+  @media only screen and (max-width: 750px){
+    @content
+  }
+};
+
+@mixin smartphone-650 {
+  @media only screen and (max-width: 650px){
+    @content
+  }
+};
+
+@mixin  smartphone-550 {
+  @media only screen and (max-width: 550px){
+    @content
+  }
+};

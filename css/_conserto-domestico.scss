@@ -1,0 +1,117 @@
+@import "_variaveis-e-mixins.scss";
+.conserto__domestico {
+  width: 100%;
+  &::before {
+    content: '';
+    display: inline-block;
+    margin-top: 40px;
+  }
+  .conserto__domestico-filho {
+    display: grid;
+    grid-template-columns: 0.6fr 700px 700px 1fr;  
+    // justify-items: center;
+    @include desktop-1400 {
+      grid-template-columns: 1fr 1fr;  
+    }
+    @include tablet-900 {
+      grid-template-columns: 1fr;
+      grid-template-rows: 540px 1fr;
+    }
+  }
+}
+
+.informacoes__conserto-domestico {
+  width: 65%;
+  height: 600px;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 5% 0 0 ;
+  margin-left: 50px;
+  @include desktop-1400 {
+    grid-column: 1;  
+  }
+  @include tablet-900{
+    height: 480px;
+  }
+
+  
+  h1 {
+    @include desktop-1400 {
+      font-size: 4em;
+    }
+    font-size: 5em;
+    font-weight: 700;
+    color: $cor-primaria;
+    padding: 20px 0;
+  }
+  h2 {
+    @include desktop-1400 {
+      font-size: 2em;
+    }
+    font-size: 3em;
+    font-weight: 400;
+    color: $cor-terciaria;
+  }
+  p {
+    @include desktop-1400 {
+      font-size: 1.2em;
+    }
+    padding: 20px 0;
+    line-height: .7cm;
+    font-size: 1.3em;
+    color: $cor-secundaria;
+  }
+  @include credito-das-imagens($cor-secundaria, $cor-primaria);
+  span {
+    padding: 0 0 20px 0;
+  }
+
+  button {
+    margin-top: 20px;  
+    width: 370px;
+    height: 58px;
+    text-transform: uppercase;
+    background-color: #fff;
+    color: $cor-secundaria;
+    border: 3px solid $cor-secundaria;
+    letter-spacing: 0.05cm;
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+.fotos__conserto-domestico {
+  grid-column: 3;
+  width: 100%;
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+  @include desktop-1400 {
+    grid-column: 2;
+  }
+  @include tablet-900 {
+    grid-column: 1;
+    grid-row: 2;
+    width: 88%;
+    justify-self: center;
+  }
+  img {
+    &:first-child {
+      width: 100%;
+      transform: scale(1.3);
+      position: absolute;
+      top: 98px;
+      left: -80px;
+    }
+    &:last-child {
+      width: 80%;
+      position: absolute;
+      transform: scale(.9);
+      top: 300px;
+      left: 120px
+    }
+  }
+}
+

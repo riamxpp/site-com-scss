@@ -1,0 +1,145 @@
+.sobre__nos-parte-2 {
+  display: flex;
+  width: 100%;
+  height: 900px;
+  position: relative;
+  .sobre__nos-parte-2-fundo-cinza {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #e5e5e5;
+    @include desktop-1200 {
+      width: 35%;
+    }
+  }
+
+  article {
+    z-index: 1;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    @include desktop-1200 {
+      width: 100%;
+      margin: 0;
+    }
+    .sobre__nos-parte-2-filho {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      @include tablet-900 {
+        flex-direction: column;
+        justify-content: inherit;
+      }
+      .sobre__nos-parte-2-fotos {
+        width: 900px;
+        height: 100%;
+        position: relative;
+        @include desktop-1200 {
+          width: 50%;
+        }
+        @include tablet-900 {
+          width: 70%;
+          height: 50%;
+        }
+        @include smartphone-650 {
+          width: 70%;
+        }
+
+        img {
+          width: 85%;
+          margin-left: 10%;
+          @include tablet-900 {
+            width: 470px;
+            height: 317px;
+          }
+          @include smartphone-650 {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        div:first-child {
+          position: absolute;
+          top: 240px;
+          z-index: 1;
+          @include tablet-900 {
+            top: 50px;
+          }
+        }
+        div:last-child {
+          position: absolute;
+          width: 85%;
+          height: 50%;
+          background: $cor-primaria;
+          top: 340px;
+          @include desktop-1400 {
+            height: 40%;
+          }
+          @include desktop-1200 {
+            height: 30%;
+          }
+          @include tablet-900 {
+            height: 60%;
+            top: 150px;
+          }
+          @include smartphone-650 {
+            height: 50%;            
+            top: 135px;
+          }
+        }
+      }
+      .sobre__nos-parte-2-informacoes {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @include tablet-900 {
+          margin: 50px 22px 0 0;
+          width: 500px;
+        }
+        @include smartphone-650 {
+          width: 90%;
+          margin: 0;
+        }
+        h2 {
+          font-size: 3em;
+          font-weight: 700;
+        }
+        p {
+          font-size: 1.3em;
+          line-height: 1.3;
+          font-weight: 500;
+        }
+        @include credito-das-imagens(red, $cor-primaria);
+        span {
+          font-style: italic;
+        }
+        .sobre__nos-parte-2-mais-informacoes {
+          text-decoration: none;
+          padding: 15px 20px 15px 20px;
+          border: 3px solid $cor-secundaria;
+          text-align: center;
+          color: $cor-secundaria;
+          text-transform: uppercase;
+          letter-spacing: 0.05cm;
+          font-weight: 500;
+          &:hover {
+            border: none;
+            padding: 18px 23px 18px 23px;
+          }
+          @include desktop-1400 {
+            font-size: .8em;
+          }
+          @include tablet-900 {
+            width: 300px;
+            padding: 10px 15px 10px 15px;
+            &:hover {
+              padding: 13px 18px 13px 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

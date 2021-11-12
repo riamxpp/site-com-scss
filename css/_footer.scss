@@ -1,0 +1,19 @@
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  color: #fff;
+  span {
+    padding: 50px;
+    font-size: 1.1em;
+    a {
+      color: $cor-primaria;
+      &:hover {
+        text-decoration: none;
+        color: darken($cor-primaria, 20%);
+      }
+    }
+  }
+}
